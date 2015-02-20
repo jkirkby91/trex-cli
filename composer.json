@@ -1,0 +1,30 @@
+{
+    "name": "raphhh/trex-cli",
+    "description": "Command process helper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raphaël Lefebvre",
+            "email": "raphael@raphaellefebvre.be"
+        }
+    ],
+    "keywords": [
+        "cli",
+        "shell"
+    ],
+    "autoload": {
+        "psr-4": {
+            "TRex\\Cli\\": [
+                "src/",
+                "tests/"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    }
+}
