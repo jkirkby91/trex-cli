@@ -12,7 +12,7 @@ class ExecutorTest extends \PHPUnit_Framework_TestCase
     public function testRead()
     {
         $executor = new Executor();
-        $this->assertSame("foo\nbar", $executor->read("echo foo && echo bar"));
+        $this->assertSame('foo'.PHP_EOL.'bar', $executor->read('echo foo && echo bar'));
     }
 
     public function testFlush()

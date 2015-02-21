@@ -17,7 +17,7 @@ class Executor
      * @param string $eol
      * @return string
      */
-    public function read($command, $eol = "\n")
+    public function read($command, $eol = PHP_EOL)
     {
         exec($command, $output);
         return implode($eol, $output);
