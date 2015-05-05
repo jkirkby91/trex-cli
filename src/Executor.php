@@ -27,16 +27,13 @@ class Executor
      * Links the command with the current STD streams.
      *
      * @param string $command
+     * @param array $streams
      * @return bool
      */
-    public function flush($command)
-    {
-        $streams = [
-            STDIN,
-            STDOUT,
-            STDERR,
-        ];
-
+    public function flush(
+        $command,
+        array $streams
+    ) {
         $process = proc_open($command, $streams, $pipes);
         if (!is_resource($process)) {
             throw new \RuntimeException('Error to open the process');
