@@ -28,13 +28,21 @@ class Executor
      *
      * @param string $command
      * @param array $streams
+     * @param array $pipes
+     * @param string $cwd
+     * @param array $env
+     * @param array $options
      * @return bool
      */
     public function flush(
         $command,
-        array $streams
+        array $streams,
+        array &$pipes = [],
+        $cwd = null,
+        array $env = null,
+        array $options = []
     ) {
-        $process = proc_open($command, $streams, $pipes);
+        $process = proc_open($command, $streams, $pipes, $cwd, $env, $options);
         if (!is_resource($process)) {
             throw new \RuntimeException('Error to open the process');
         }
