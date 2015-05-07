@@ -19,7 +19,7 @@ class ExecutorTest extends \PHPUnit_Framework_TestCase
     {
         $streams = $this->provideStreams();
         $executor = new Executor();
-        $this->assertTrue($executor->flush('echo foo', $streams));
+        $this->assertSame(0, $executor->flush('echo foo', $streams));
 
         rewind($streams[0]);
         $this->assertSame('', fread($streams[0], 1024));

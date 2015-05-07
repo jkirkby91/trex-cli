@@ -32,7 +32,7 @@ class Executor
      * @param string $cwd
      * @param array $env
      * @param array $options
-     * @return bool
+     * @return int
      */
     public function flush(
         $command,
@@ -46,6 +46,6 @@ class Executor
         if (!is_resource($process)) {
             throw new \RuntimeException('Error to open the process');
         }
-        return proc_close($process) === 0;
+        return proc_close($process);
     }
 }
