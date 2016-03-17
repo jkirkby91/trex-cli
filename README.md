@@ -15,5 +15,5 @@ Command process helper.
 ## Installation
 
 ```
-$ composer install raphhh/trex-cli
+$ composer require raphhh/trex-cli
 ```
