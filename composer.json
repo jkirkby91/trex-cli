@@ -1,12 +1,12 @@
 {
-    "name": "raphhh/trex-cli",
+    "name": "jkirkby91/trex-cli",
     "description": "Command process helper",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Raphaël Lefebvre",
-            "email": "raphael@raphaellefebvre.be"
+            "name": "James Kirkby",
+            "email": "jkirkby91@gmail.com"
         }
     ],
     "keywords": [
